@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backWhite"
+    tools:context=".MainActivity3">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="7dp"
+            android:layout_gravity="center"
+            android:onClick="funBack"
+            android:background="@drawable/rippleeffect"
+            android:src="@drawable/icons8_left_32px" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Pastore"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="9.5"/>
+
+        <ImageView
+            android:id="@+id/bulb"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="7dp"
+            android:layout_gravity="center"
+            android:onClick="funBack"
+            android:background="@drawable/rippleeffect"
+            android:src="@drawable/icons8_checkmark_32px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/devider1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="3.2dp"
+        android:background="@color/fentblack"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"/>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@id/devider1">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:src="@drawable/fb_msgr" />
+
+
+        <EditText
+            android:id="@+id/ettitle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/dailogbtnback1"
+            android:hint="Title \t Ex: Facebook"
+            android:padding="10dp"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etdesc"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dailogbtnback1"
+            android:hint="Which site? \t Ex: www.facebook.com"
+            android:padding="10dp"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etusername"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dailogbtnback1"
+            android:hint="Username"
+            android:padding="10dp"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etpassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dailogbtnback1"
+            android:hint="Password"
+            android:padding="10dp"
+            android:textColor="@color/green"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

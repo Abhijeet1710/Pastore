@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backWhite"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pastore"
+            android:textSize="20sp"
+            android:paddingLeft="20dp"
+            android:textColor="@color/black"
+            android:layout_weight="9"/>
+
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:onClick="funAdd"
+            android:padding="7dp"
+            android:background="@drawable/rippleeffect"
+            android:src="@drawable/icons8_plus_32px" />
+
+
+        <ImageView
+            android:id="@+id/bulb"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="7dp"
+            android:onClick="funChangeTheme"
+            android:background="@drawable/rippleeffect"
+            android:src="@drawable/icons8_idea_32px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/devider1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="3.2dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/fentblack"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/devider1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/nothingToShow"
+        android:layout_width="200dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Opps! \n Nothing to show."/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icons8_erase_120px"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
