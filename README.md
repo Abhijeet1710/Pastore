@@ -7,9 +7,7 @@ About###
 
 **Pastore** is a sample Username and password  store Android application 📱  for different sites, built to demonstrate use of Modern Android development tools. 
 
-You can Install and test latest Pastore app from  👇
-
-[](https://github.com/Abhijeet1710/Pastore/releases/tag/v1.0)
+You can Install and test latest Pastore app from latest section at right side 
 
 ________________________________________________________________________________________________________________________________________
 
