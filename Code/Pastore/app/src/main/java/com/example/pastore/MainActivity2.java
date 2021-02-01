@@ -1,14 +1,17 @@
 package com.example.pastore;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.hardware.input.InputManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.pastore.sp.Sp;
@@ -24,9 +27,19 @@ public class MainActivity2 extends AppCompatActivity {
 
     EditText title, desc, username, password;
     CheckBox checkBox;
+    Spinner spinnersites;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) setTheme(R.style.Theme_PastoreNight);
+
+        if(s.DAYMODE){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
@@ -35,6 +48,13 @@ public class MainActivity2 extends AppCompatActivity {
         username = findViewById(R.id.etusername);
         password = findViewById(R.id.etpassword);
         checkBox = findViewById(R.id.checkbox);
+
+        spinnersites = findViewById(R.id.spinnersites);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.sites, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnersites.setAdapter(adapter);
 
     }
 
@@ -85,6 +105,8 @@ public class MainActivity2 extends AppCompatActivity {
             username.getText().clear();
             password.getText().clear();
 
+            funBack(view);
+
         }
 
     }
@@ -102,11 +124,11 @@ public class MainActivity2 extends AppCompatActivity {
 
     }
 
-    public void funPassword(View view) {
-        if(checkBox.isChecked()){
-            password.setText(generatePassword(8));
-        }
-    }
+//    public void funPassword(View view) {
+//        if(checkBox.isChecked()){
+//            password.setText(generatePassword(8));
+//        }
+//    }
 
     private String generatePassword(int length) {
 
@@ -129,5 +151,13 @@ public class MainActivity2 extends AppCompatActivity {
 
         return String.valueOf(password);
 
+    }
+
+    public void funCheckbox(View view) {
+        if(checkBox.isChecked()){
+            password.setText(generatePassword(8));
+        }else{
+            password.setText("");
+        }
     }
 }

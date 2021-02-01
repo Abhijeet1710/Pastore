@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Pastore</string>
+
+    <string-array name="sites">
+
+        <item>Google</item>
+        <item>Facebook</item>
+        <item>Instagram</item>
+        <item>LinkedIn</item>
+        <item>WhatsApp</item>
+
+    </string-array>
 </resources>

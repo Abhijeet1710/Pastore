@@ -33,11 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
     Sp s = new Sp();
 
-    static String theme = "light";
-
     TextView appName;
     ConstraintLayout parent;
-    ImageView bulb;
     LinearLayout devider1;
     LinearLayout nothingToShow;
 
@@ -50,12 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) setTheme(R.style.Theme_PastoreNight);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         appName = findViewById(R.id.appName);
         parent = findViewById(R.id.parent);
-        bulb = findViewById(R.id.bulb);
         devider1 = findViewById(R.id.devider1);
         nothingToShow = findViewById(R.id.nothingToShow);
 
@@ -71,34 +70,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void funChangeTheme(View view) {
 
-//        if(theme == "dark"){
-//            appName.setTextColor(ContextCompat.getColor(this, R.color.black));
-//            parent.setBackgroundColor(ContextCompat.getColor(this, R.color.backWhite));
-//            bulb.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.icons8_idea_32px));
-//            devider1.setBackgroundColor(ContextCompat.getColor(this, R.color.fentblack));
-//            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-//            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.white));
-//            theme = "light";
-//
-//        }else if(theme == "light"){
-//            appName.setTextColor(ContextCompat.getColor(this, R.color.white));
-//            parent.setBackgroundColor(ContextCompat.getColor(this, R.color.backBlack));
-//            bulb.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.icons8_idea_32px_1));
-//            devider1.setBackgroundColor(ContextCompat.getColor(this, R.color.fentWhite));
-//
-//
-//            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.backBlack));
-//            View decorView = getWindow().getDecorView();
-//            decorView.setSystemUiVisibility(decorView.getSystemUiVisibility() & ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-//            theme = "dark";
-//
-//        }
-
-//        if(theme == "light"){
-//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-//        }else{
-//            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-//        }
+        if(s.DAYMODE){
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            s.DAYMODE = false;
+        }else{
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            s.DAYMODE = true;
+        }
 
     }
 

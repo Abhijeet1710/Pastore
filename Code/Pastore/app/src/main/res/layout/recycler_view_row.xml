@@ -3,29 +3,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:padding="10dp"
     android:layout_marginLeft="5dp"
     android:layout_marginRight="5dp"
     android:id="@+id/parent"
+    android:background="?attr/backgroundColor"
     android:layout_height="wrap_content">
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="5dp"
+            android:layout_weight="0.4"
+            android:layout_gravity="center"
+            android:src="@drawable/google" />
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_weight="7"
             android:gravity="left"
+            android:layout_weight="5"
             android:orientation="vertical"
             android:padding="15dp">
 
@@ -35,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:text="Title"
                 android:textSize="17sp"
-                android:textColor="@color/black" />
+                android:textColor="?attr/textColor" />
 
 
             <TextView
@@ -44,25 +54,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:text="description"
+                android:textColor="?attr/secondaryColor"
                 android:textSize="15sp" />
 
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
             android:layout_gravity="center"
-            android:layout_weight="3"
-            android:layout_marginRight="10dp"
-            android:src="@drawable/fb_msgr" />
+            android:src="@drawable/deleteicon" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:background="@color/fentblack"
+        android:background="?deviderColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

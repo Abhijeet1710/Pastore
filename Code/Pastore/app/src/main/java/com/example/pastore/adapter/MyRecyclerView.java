@@ -56,6 +56,8 @@ public class MyRecyclerView extends RecyclerView.Adapter<MyRecyclerView.MyViewHo
                     break;
             case "whatsapp": holder.image.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.whatsapp));
                     break;
+            case "instagram": holder.image.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.instagram));
+                break;
             default:  holder.image.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.fb_msgr));
         }
 
@@ -102,6 +104,7 @@ public class MyRecyclerView extends RecyclerView.Adapter<MyRecyclerView.MyViewHo
             v.getContext().startActivity(intent);
 
         }
+
 
 
     }

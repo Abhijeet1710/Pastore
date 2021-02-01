@@ -12,4 +12,6 @@ public class Sp {
 
     public String TOTAL = "KeyTotal";
 
+    public static boolean DAYMODE = true;
+
 }

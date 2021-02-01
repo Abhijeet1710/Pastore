@@ -2,6 +2,7 @@ package com.example.pastore;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 
 import android.content.Context;
@@ -36,6 +37,9 @@ public class MainActivity3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        if(AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) setTheme(R.style.Theme_PastoreNight);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         Intent intent = getIntent();
@@ -77,6 +81,8 @@ public class MainActivity3 extends AppCompatActivity {
             case "linkedin": img1.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.linkedin));
                 break;
             case "whatsapp": img1.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.whatsapp));
+                break;
+            case "instagram": img1.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.instagram));
                 break;
             default:  img1.setImageDrawable(ContextCompat.getDrawable(context, R.drawable.fb_msgr));
         }

@@ -5,13 +5,13 @@
     android:id="@+id/parent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backWhite"
+    android:background="?attr/backgroundColor"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/topPanel"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="55dp"
         android:orientation="horizontal"
         android:weightSum="10"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,29 +25,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pastore"
-            android:textSize="20sp"
+            android:textSize="21sp"
             android:paddingLeft="20dp"
-            android:textColor="@color/black"
+            android:textColor="?attr/textColor"
             android:layout_weight="9"/>
-
-        <ImageView
-            android:id="@+id/plus"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:onClick="funAdd"
-            android:padding="7dp"
-            android:background="@drawable/rippleeffect"
-            android:src="@drawable/icons8_plus_32px" />
 
 
         <ImageView
             android:id="@+id/bulb"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="7dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="3dp"
+            android:layout_gravity="center"
             android:onClick="funChangeTheme"
             android:background="@drawable/rippleeffect"
-            android:src="@drawable/icons8_idea_32px" />
+            android:src="@drawable/changethemeicon" />
 
     </LinearLayout>
 
@@ -57,7 +49,7 @@
         android:orientation="horizontal"
         android:layout_height="3.2dp"
         android:layout_marginTop="3dp"
-        android:background="@color/fentblack"
+        android:background="?attr/deviderColor"
         app:layout_constraintTop_toBottomOf="@+id/topPanel"/>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -66,6 +58,7 @@
         android:layout_height="0dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
+        tools:listitem="@layout/recycler_view_row"
         app:layout_constraintTop_toBottomOf="@+id/devider1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -97,6 +90,30 @@
             android:src="@drawable/icons8_erase_120px"/>
 
     </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="35dp"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="20dp"
+        app:cardBackgroundColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/plus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="funAdd"
+            android:padding="15dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rippleeffect"
+            android:src="@drawable/end" />
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
