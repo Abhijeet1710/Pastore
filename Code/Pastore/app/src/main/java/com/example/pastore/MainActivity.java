@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         if(total == 0) {
 
             nothingToShow.setVisibility(View.VISIBLE);
-            Toast.makeText(MainActivity.this, "Nothing inside SharedPreferences", Toast.LENGTH_LONG).show();
+//            Toast.makeText(MainActivity.this, "Nothing inside SharedPreferences", Toast.LENGTH_LONG).show();
 
         }else{
 

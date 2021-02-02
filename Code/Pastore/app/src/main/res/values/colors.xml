@@ -22,8 +22,14 @@
 <!--    Dialog-->
     <color name="green">#008A7D</color>
 
-    <color name="darkBlue">#24307E</color>
+    <color name="blue">#2196F3</color>
     <color name="fentblack1">#D8D7D7</color>
+
+    <color name="etBorderColorD"> #F4F4F4 </color>
+    <color name="etBorderColorN">#737373</color>
+
+
+
 
 </resources>
 

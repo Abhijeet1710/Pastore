@@ -65,86 +65,101 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:orientation="vertical"
-        android:padding="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@id/devider1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="Add Acc. Info"
+            android:textColor="?attr/greenColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinnersites"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:background="@drawable/dailogbtnback1"
-            android:padding="10dp"
-            android:textColor="?attr/greenColor"
-            android:textSize="16sp" />
+            android:layout_height="45dp"
+            android:background="@drawable/textback"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/ettitle"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/dailogbtnback1"
-            android:hint="Title \t Ex: Facebook"
-            android:padding="10dp"
+            android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:textColor="?attr/greenColor"
-            android:textSize="16sp" />
+            android:background="@drawable/textback"
+            android:hint="Title \t Ex: Facebook"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etdesc"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/dailogbtnback1"
+            android:background="@drawable/textback"
             android:hint="Which site? \t Ex: www.facebook.com"
-            android:padding="10dp"
-            android:textColor="?attr/greenColor"
-            android:textSize="16sp" />
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/etusername"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/dailogbtnback1"
+            android:background="@drawable/textback"
             android:hint="Username"
-            android:padding="10dp"
-            android:textColor="?attr/greenColor"
-            android:textSize="16sp" />
-
-
-        <EditText
-            android:id="@+id/etpassword"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/dailogbtnback1"
-            android:hint="Password"
-            android:padding="10dp"
-            android:textColor="?attr/greenColor"
-            android:textSize="16sp" />
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp" />
 
         <CheckBox
             android:id="@+id/checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#2196F3"
             android:onClick="funCheckbox"
             android:text="Auto Generate Password" />
 
-        <Button
+
+        <EditText
+            android:id="@+id/etpassword"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/dialogbtnback"
+            android:background="@drawable/textback"
+            android:fontFamily="monospace"
+            android:hint="Password"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/addbrnback"
             android:onClick="funAdd"
             android:text="Add"
             android:textAllCaps="false"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

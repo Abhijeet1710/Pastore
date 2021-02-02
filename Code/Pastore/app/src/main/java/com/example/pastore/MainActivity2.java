@@ -77,7 +77,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         }else{
 
-            String img = getSiteName(title1, desc1);
+            String img = spinnersites.getSelectedItem().toString().toLowerCase();
 
             sharedPreferences = getSharedPreferences(s.MYPREFERENCES, MODE_PRIVATE);
             SharedPreferences.Editor ed = sharedPreferences.edit();
@@ -110,25 +110,6 @@ public class MainActivity2 extends AppCompatActivity {
         }
 
     }
-
-    public String getSiteName(String title, String description) {
-
-        String title1 = title.toLowerCase();
-
-        if(title1.contains("google")) return "google";
-        if(title1.contains("facebook")) return "facebook";
-        if(title1.contains("linkedin")) return "linkedin";
-        if(title1.contains("whatsapp")) return "whatsapp";
-
-        return "null";
-
-    }
-
-//    public void funPassword(View view) {
-//        if(checkBox.isChecked()){
-//            password.setText(generatePassword(8));
-//        }
-//    }
 
     private String generatePassword(int length) {
 

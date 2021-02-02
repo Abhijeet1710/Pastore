@@ -160,10 +160,6 @@ public class MainActivity3 extends AppCompatActivity {
             ed1.putString(s.USERNAME, username);
             ed1.putString(s.PASSWORD, password);
 
-            String img = mainActivity2.getSiteName(title, desc);
-            setImg(img);
-            ed1.putString(s.IMG, img);
-
             ed1.commit();
             Toast.makeText(MainActivity3.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
 

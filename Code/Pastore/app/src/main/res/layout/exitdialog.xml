@@ -51,7 +51,7 @@
                 android:layout_height="37dp"
                 android:layout_marginRight="10dp"
                 android:text="No"
-                android:textColor="@color/green"
+                android:textColor="?attr/greenColor"
                 android:layout_weight="5"
                 android:background="@drawable/dailogbtnback1"
                 android:textAllCaps="false" />

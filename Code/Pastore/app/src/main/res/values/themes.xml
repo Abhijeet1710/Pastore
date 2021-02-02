@@ -13,7 +13,9 @@
         <item name="secondaryColor">@color/secondarytextD</item>
 
         <item name="deviderColor">@color/deviderD</item>
-        <item name="greenColor">@color/green</item>
+        <item name="greenColor">@color/blue</item>
+
+        <item name="etborderColor">@color/etBorderColorD</item>
 
 
         <!-- Status bar color. -->
@@ -37,7 +39,10 @@
         <item name="secondaryColor">@color/secondarytextN</item>
 
         <item name="deviderColor">@color/deviderN</item>
-        <item name="greenColor">@color/green</item>
+        <item name="greenColor">@color/blue</item>
+
+        <item name="etborderColor">@color/etBorderColorN</item>
+
         <!-- Status bar color. -->
 
         <item name="android:statusBarColor" tools:targetApi="l">@color/backN</item>
